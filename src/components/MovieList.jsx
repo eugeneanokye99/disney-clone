@@ -6,6 +6,7 @@ import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
 import HrMovieCard from '../components/HrMovieCard'
 
 
+
 function MovieList({genreId, index_}) {
     const [movieList, setMovieList] = useState([])
     const elementRef=useRef(null);
@@ -32,7 +33,7 @@ function MovieList({genreId, index_}) {
         className={`text-[50px] text-white p-2 z-10 cursor-pointer hidden md:block absolute
             ${index_%3==0?'mt-[80px]':'mt-[150px]'} `} />
 
-        <div ref={elementRef} className='flex overflow-x-auto gap-8 scrollbar-hide pt-5 px-3 pb-5 scroll-smooth'>
+        <div ref={elementRef} className='flex overflow-x-auto gap-8 scrollbar-hide pt-4 px-3 pb-5 scroll-smooth'>
         {movieList.map((item, index) => (
             <>
             {index_%3==0?<HrMovieCard movie={item} /> :<MovieCard movie={item} />}
